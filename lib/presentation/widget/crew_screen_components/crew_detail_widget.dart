@@ -42,8 +42,8 @@ class _CrewDetailWidgetState extends State<CrewDetailWidget> {
                   Text(
                     onePieceCrewDetail.name,
                     style: GoogleFonts.bebasNeue(
-                        color: widget
-                            .pirateCrews.crewModels[widget.index].teamColor),
+                      color: onePieceCrewDetail.colorp,
+                    ),
                   ),
                   const SizedBox(
                     height: 8,

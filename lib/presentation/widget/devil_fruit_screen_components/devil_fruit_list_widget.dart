@@ -15,9 +15,12 @@ class DevilFruitListWidget extends StatelessWidget {
         children: dvf.devilFruits.map((devilfruit) {
           return Column(
             children: [
-              Text(devilfruit.fruitName),
+              Text(
+                devilfruit.fruitName,
+                style: TextStyle(color: devilfruit.fcolor),
+              ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(10.0),
                 child: InkWell(
                   onTap: () {
                     Navigator.push(

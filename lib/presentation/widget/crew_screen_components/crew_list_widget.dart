@@ -17,9 +17,10 @@ class CrewListWidget extends StatelessWidget {
               Text(
                 _pirateCrews.crewModels[index].name,
                 style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    color: _pirateCrews.crewModels[index].color),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: _pirateCrews.crewModels[index].teamColor,
+                ),
               ),
               InkWell(
                 onTap: (() {
@@ -37,7 +38,7 @@ class CrewListWidget extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(95),
+                      borderRadius: BorderRadius.circular(100),
                       child: Image.asset(
                         _pirateCrews.crewModels[index].image,
                         width: 200,

@@ -9,7 +9,13 @@ class DevilFruitScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Devil Fruits"),
+        title: Container(
+          width: double.infinity,
+          child: Image.asset(
+            "assets/images/loopo.png",
+            height: 100,
+          ),
+        ),
         centerTitle: true,
       ),
       body: DevilFruitListWidget(),

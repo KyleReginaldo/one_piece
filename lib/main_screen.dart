@@ -2,6 +2,7 @@ import 'package:colorful_iconify_flutter/icons/logos.dart';
 import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
+import 'package:iconify_flutter/icons/ri.dart';
 
 import 'presentation/screen/crew_screen.dart';
 import 'presentation/screen/devil_fruit_screen.dart';
@@ -20,8 +21,8 @@ class _MainScreenState extends State<MainScreen> {
   List screens = [
     const CrewScreen(),
     const DevilFruitScreen(),
-    const todo1Screen(),
-    const todo2Screen(),
+    const ShipScreen(),
+    const Todo2Screen(),
   ];
 
   @override
@@ -37,10 +38,11 @@ class _MainScreenState extends State<MainScreen> {
         },
         destinations: const [
           NavigationDestination(
-              icon: Iconify(Logos.copyleft_pirate), label: 'crew'),
+              icon: Iconify(Logos.copyleft_pirate), label: 'pirates'),
           NavigationDestination(
-              icon: Iconify(Mdi.fruit_grapes), label: 'D-fruit'),
-          NavigationDestination(icon: Icon(Icons.people), label: 'TD'),
+              icon: Iconify(Mdi.fruit_grapes), label: 'Devil fruit'),
+          NavigationDestination(
+              icon: Iconify(Ri.sailboat_line), label: 'ships'),
           NavigationDestination(icon: Icon(Icons.people), label: 'TD'),
         ],
       ),

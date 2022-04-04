@@ -16,9 +16,12 @@ class DevilFruitDetailWidget extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           dvD.engName,
-          style: GoogleFonts.roboto(),
+          style: GoogleFonts.roboto(
+            color: dvD.fcolor,
+          ),
         ),
         centerTitle: true,
+        elevation: 0,
       ),
       body: Column(
         children: [
@@ -37,7 +40,7 @@ class DevilFruitDetailWidget extends StatelessWidget {
                 end: Alignment.bottomCenter,
               ),
             ),
-            padding: const EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.only(bottom: 15),
             height: 300,
             width: MediaQuery.of(context).size.width,
             child: Image.asset(dvD.imagePath),
@@ -46,7 +49,9 @@ class DevilFruitDetailWidget extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Text(
               dvD.description,
-              style: GoogleFonts.lato(),
+              style: GoogleFonts.lato(
+                color: dvD.fcolor,
+              ),
             ),
           ),
         ],

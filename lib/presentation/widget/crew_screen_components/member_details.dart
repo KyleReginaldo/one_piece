@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../../../data/pirate_crews.dart';
 import '../../../models/one_piece_model.dart';
 
@@ -17,16 +18,27 @@ class MemberDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: pirateCrews.crewModels[index].teamColor,
+        appBar: AppBar(
+          backgroundColor: onePieceCrewDetail.colorp,
+          centerTitle: true,
+          title: Text(
+            onePieceCrewDetail.name,
+            style: GoogleFonts.anton(
+              color: pirateCrews.crewModels[index].color,
+            ),
+          ),
+          elevation: 0,
+        ),
+        backgroundColor: onePieceCrewDetail.colorp,
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.width,
                   child: Image.asset(
                     onePieceCrewDetail.detailPicPath,
-                    height: 400,
+                    height: 350,
+                    width: MediaQuery.of(context).size.width,
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -34,7 +46,9 @@ class MemberDetails extends StatelessWidget {
                   padding: const EdgeInsets.all(18.0),
                   child: Text(
                     onePieceCrewDetail.detail,
-                    style: GoogleFonts.lato(),
+                    style: GoogleFonts.lato(
+                      color: pirateCrews.crewModels[index].color,
+                    ),
                   ),
                 ),
               ],
