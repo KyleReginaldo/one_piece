@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:practice_widgets/presentation/widget/schip_screen_component/ship_screen_list.dart';
 
-import '../widget/devil_fruit_screen_components/devil_fruit_list_widget.dart';
-
-class DevilFruitScreen extends StatelessWidget {
-  const DevilFruitScreen({Key? key}) : super(key: key);
+class ShipScreen extends StatelessWidget {
+  const ShipScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Container(
           width: double.infinity,
           child: Image.asset(
@@ -16,10 +16,9 @@ class DevilFruitScreen extends StatelessWidget {
             height: 100,
           ),
         ),
-        centerTitle: true,
-        backgroundColor: Colors.green.shade600,
+        backgroundColor: Colors.lightBlue.shade800,
       ),
-      body: DevilFruitListWidget(),
+      body: ShipScreenList(),
     );
   }
 }

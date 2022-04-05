@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:practice_widgets/constansts/sizes/constant_size.dart';
 import '../../../data/pirate_crews.dart';
 import 'member_details.dart';
 
@@ -65,8 +66,8 @@ class _CrewDetailWidgetState extends State<CrewDetailWidget> {
                         child: Image.asset(
                           onePieceCrewDetail.imagePath,
                           fit: BoxFit.fill,
-                          height: 150,
-                          width: 150,
+                          height: ConstantSize.OPCREW_HNW,
+                          width: ConstantSize.OPCREW_HNW,
                         ),
                       ),
                     ),

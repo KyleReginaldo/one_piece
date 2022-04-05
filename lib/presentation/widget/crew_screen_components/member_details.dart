@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../constansts/sizes/constant_size.dart';
 import '../../../data/pirate_crews.dart';
 import '../../../models/one_piece_model.dart';
 
@@ -43,7 +44,7 @@ class MemberDetails extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(ConstantSize.PADDING),
                   child: Text(
                     onePieceCrewDetail.detail,
                     style: GoogleFonts.lato(

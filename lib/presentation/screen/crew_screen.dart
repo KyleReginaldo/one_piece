@@ -18,6 +18,7 @@ class CrewScreen extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 5,
+        backgroundColor: Colors.red.shade900,
       ),
       body: SafeArea(child: CrewListWidget()),
     );

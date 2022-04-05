@@ -5,6 +5,6 @@ class Todo2Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
