@@ -6,19 +6,6 @@ class ShipScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: Container(
-          width: double.infinity,
-          child: Image.asset(
-            "assets/images/loopo.png",
-            height: 100,
-          ),
-        ),
-        backgroundColor: Colors.lightBlue.shade800,
-      ),
-      body: ShipScreenList(),
-    );
+    return ShipScreenList();
   }
 }

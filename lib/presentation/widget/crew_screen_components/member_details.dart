@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/ic.dart';
 import '../../../constansts/sizes/constant_size.dart';
 import '../../../data/pirate_crews.dart';
 import '../../../models/one_piece_model.dart';
@@ -29,6 +30,15 @@ class MemberDetails extends StatelessWidget {
             ),
           ),
           elevation: 0,
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: const Iconify(
+              Ic.sharp_arrow_left,
+              color: Colors.white,
+            ),
+          ),
         ),
         backgroundColor: onePieceCrewDetail.colorp,
         body: SafeArea(

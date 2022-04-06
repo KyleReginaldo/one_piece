@@ -7,19 +7,6 @@ class DevilFruitScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Container(
-          width: double.infinity,
-          child: Image.asset(
-            "assets/images/loopo.png",
-            height: 100,
-          ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.green.shade600,
-      ),
-      body: DevilFruitListWidget(),
-    );
+    return DevilFruitListWidget();
   }
 }

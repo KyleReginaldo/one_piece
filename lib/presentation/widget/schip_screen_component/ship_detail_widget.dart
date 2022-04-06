@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_widgets/models/pirate_ships_model.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/ic.dart';
 
 class ShipDetailWidget extends StatelessWidget {
   final PirateShipModel pirateShip;
@@ -14,6 +16,15 @@ class ShipDetailWidget extends StatelessWidget {
         backgroundColor: Colors.blue.shade700,
         title: Text(
           pirateShip.shipName,
+        ),
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Iconify(
+            Ic.sharp_arrow_left,
+            color: Colors.white,
+          ),
         ),
         centerTitle: true,
         elevation: 25,

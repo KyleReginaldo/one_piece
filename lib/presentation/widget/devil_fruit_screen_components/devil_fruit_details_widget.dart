@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:practice_widgets/constansts/sizes/constant_size.dart';
-
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/ic.dart';
 import '../../../models/devil_fruit_model.dart';
 
 class DevilFruitDetailWidget extends StatelessWidget {
@@ -19,6 +20,15 @@ class DevilFruitDetailWidget extends StatelessWidget {
           dvD.engName,
           style: GoogleFonts.roboto(
             color: dvD.fcolor,
+          ),
+        ),
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Iconify(
+            Ic.sharp_arrow_left,
+            color: Colors.white,
           ),
         ),
         centerTitle: true,

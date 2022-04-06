@@ -7,20 +7,6 @@ class CrewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Container(
-          width: double.infinity,
-          child: Image.asset(
-            "assets/images/loopo.png",
-            height: 100,
-          ),
-        ),
-        centerTitle: true,
-        elevation: 5,
-        backgroundColor: Colors.red.shade900,
-      ),
-      body: SafeArea(child: CrewListWidget()),
-    );
+    return CrewListWidget();
   }
 }

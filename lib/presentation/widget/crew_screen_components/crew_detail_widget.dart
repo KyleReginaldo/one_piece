@@ -21,14 +21,12 @@ class _CrewDetailWidgetState extends State<CrewDetailWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          widget.pirateCrews.crewModels[widget.index].name,
-        ),
-        centerTitle: true,
-      ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(
+          top: 40,
+          left: 15,
+          right: 15,
+        ),
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
@@ -45,9 +43,6 @@ class _CrewDetailWidgetState extends State<CrewDetailWidget> {
                     style: GoogleFonts.bebasNeue(
                       color: onePieceCrewDetail.colorp,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 8,
                   ),
                   InkWell(
                     onTap: () {

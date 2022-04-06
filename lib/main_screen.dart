@@ -8,7 +8,6 @@ import 'presentation/screen/crew_screen.dart';
 import 'presentation/screen/devil_fruit_screen.dart';
 import 'presentation/screen/ship_screen.dart';
 import 'presentation/screen/todo2.dart';
-import 'presentation/theme/app_color.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -30,16 +29,24 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(
+          "assets/images/loopo.png",
+          height: 100,
+        ),
+        backgroundColor: bgColors(secIndex),
+        centerTitle: true,
+      ),
       body: screens[secIndex],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-            backgroundColor: AppColor.bgColors[secIndex],
-            indicatorColor: AppColor.colors[secIndex],
+            backgroundColor: bgColors(secIndex),
+            indicatorColor: pickColors(secIndex),
             labelTextStyle: MaterialStateProperty.all(
               GoogleFonts.ptSansNarrow(
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
-                color: AppColor.colors[secIndex],
+                color: pickColors(secIndex),
               ),
             )),
         child: NavigationBar(
@@ -89,6 +96,53 @@ class _MainScreenState extends State<MainScreen> {
           ],
         ),
       ),
+      endDrawer: Drawer(
+        child: Column(
+          children: [
+            FractionallySizedBox(
+              child: Image.asset(
+                "assets/images/loopo.png",
+              ),
+            ),
+            const FractionallySizedBox(
+              child: ListTile(
+                title: Text("Kyle Dennis S. Reginaldo"),
+                subtitle: Text("Software Engr."),
+                trailing: Iconify(
+                  Mdi.email_plus,
+                  color: Colors.white,
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
     );
+  }
+
+  Color pickColors(int index) {
+    switch (index) {
+      case 0:
+        return const Color(0xff7F0000);
+      case 1:
+        return const Color(0xff49da49);
+      case 2:
+        return const Color(0xff74d2f0);
+      default:
+        return const Color(0xffFFFFFF);
+    }
+  }
+
+  Color bgColors(int index) {
+    switch (index) {
+      case 0:
+        return const Color(0xffCC0000);
+      case 1:
+        return const Color(0xff008000);
+      case 2:
+        return const Color(0xff0000CC);
+      default:
+        return const Color(0xffFFFFFF);
+    }
   }
 }
